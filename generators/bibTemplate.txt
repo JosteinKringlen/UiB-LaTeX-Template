@@ -1,0 +1,32 @@
+@online{referenceName,
+    author = {Author},
+    title = {TITLE},
+    year = {YEAR},
+    url = {URL},
+    urldate = {YYYY-MM-DD}
+}
+
+@article{referenceName,
+  title={TITLE},
+  author={AUTHORS},
+  journal={i.e Ieee software},
+  volume={i.e. 29},
+  number={i.e. 6},
+  pages={18--21},
+  year={YEAR},
+  publisher={i.e. IEEE}
+}
+
+@inbook{evolv,
+title = {TITLE},
+abstract = {ABSTRACT},
+keywords = {i.e. IR-66874, Quality Attributes, METIS-237913, Software Evolution, Software evolvability, EWI-9080},
+author = {S. Ciraci and {van den Broek}, P.M.},
+year = {YEAR},
+month = {4},
+publisher = {UMH},
+number = {06EX1382C},
+pages = {29--31},
+editor = {Laurence Duchien and Maja D'Hondt and Tom Mens},
+booktitle = {The International ERCIM Workshop on Software Evolution 2006},
+}
