@@ -13,3 +13,8 @@
 *.*.gz
 *.xml
 *.bcf
+*.acr
+*.alg
+*.glg
+*.gls
+*.glsdefs
