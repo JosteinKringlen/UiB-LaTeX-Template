@@ -1,4 +1,9 @@
-\documentclass[12pt]{report} % For shorter stuff use \documentclass[12pt]{article}
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+
+\documentclass[12pt,openright,twoside,final]{report}
 \usepackage{generators/imports}
 \include{generators/glossary}
 \bibliography{generators/refs}
@@ -6,17 +11,34 @@
 \include{generators/frontpageHVL}
 \include{generators/abstract}
 \include{generators/tableOfContentsAndListings}
-
+\pagenumbering{arabic}
 \setcounter{page}{1}
+\setlength{\parskip}{0.5cm plus4mm minus3mm}
 
+\include{chapter/introduction}
 
-\input{chapter/introduction}
-
-
-\clearpage
+% Include more chapters as required.
+%%=========================================
+\renewcommand{\glossarypreamble}{\footnotesize}
+\printglossary[style=super, type=\glsdefaulttype] \let\cleardoublepage\clearpage
 \printglossary[style=super, type=\acronymtype]
+
 %\bibliographystyle{plainnat}  %Set the type of bib you want to use in the text.
 
-\printbibliography[heading=bibintoc]
+%\printbibliography[heading=bibintoc]
+% Include more appendices as required.
+%%=========================================
+\clearpage
+\DeclareRobustCommand{\VAN}[3]{#3}
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliographystyle{generators/myplainnat}
+\bibliography{generators/refs}
+\appendix
+\titleformat{\chapter}[display]
+  {\normalfont\large\bfseries}% <- font for label "Appendix A", default \huge
+  {\chaptertitlename\ \thechapter}
+  {20pt}
+  {\large}% <- font for title, default \Huge
 
+\include{generators/appendix-a}
 \end{document}
