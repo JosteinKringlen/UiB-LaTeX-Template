@@ -25,20 +25,28 @@
 
 %\bibliographystyle{plainnat}  %Set the type of bib you want to use in the text.
 
-%\printbibliography[heading=bibintoc]
+\printbibliography[heading=bibintoc]
+\clearpage
 % Include more appendices as required.
 %%=========================================
-\clearpage
-\DeclareRobustCommand{\VAN}[3]{#3}
-\addcontentsline{toc}{chapter}{Bibliography}
-\bibliographystyle{generators/myplainnat}
-\bibliography{generators/refs}
-\appendix
-\titleformat{\chapter}[display]
+%\clearpage
+%\DeclareRobustCommand{\VAN}[3]{#3}
+%\addcontentsline{toc}{chapter}{Bibliography}
+%\bibliographystyle{generators/myplainnat}
+%\bibliography{generators/refs}
+%\appendix
+\titleformat{\chapter}[hang]
   {\normalfont\large\bfseries}% <- font for label "Appendix A", default \huge
-  {\chaptertitlename\ \thechapter}
+  {\thechapter}
   {20pt}
   {\large}% <- font for title, default \Huge
+\titlespacing*{\chapter}{0pt}{0pt}{40pt}
 
+
+\renewcommand\appendixpage{\vspace*{0.5cm}\thispagestyle{empty}\mbox{}\begin{flushleft}\Huge\bfseries\addappheadtotoc\appendixpagename\mbox{}\end{flushleft}}
+\renewcommand{\cleardoublepage}{}
+\renewcommand{\clearpage}{}
+\begin{appendices}
 \include{generators/appendix-a}
+\end{appendices}
 \end{document}

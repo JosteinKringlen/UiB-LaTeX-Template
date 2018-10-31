@@ -1,16 +1,14 @@
 \usepackage[utf8]{inputenc} % This defines the font-\usepackage[utf8]{inputenc}
 \usepackage{url}
 \def\UrlBreaks{\do\/\do-}
-\usepackage[square, numbers]{natbib}
+%\usepackage[square, numbers]{natbib}
 \usepackage{booktabs}
-<<<<<<< HEAD
 %\usepackage{natbib}
-\usepackage[backend=biber, citestyle=authoryear]{biblatex}
+%\usepackage[backend=biber, citestyle=authoryear]{biblatex}
+\usepackage[backend=biber]{biblatex}
 \usepackage[pdftex]{graphicx}
-=======
 \usepackage{graphicx}
 \usepackage{floatpag}
->>>>>>> cff733415b4396724447d287e02a0d22452756d1
 \usepackage{xcolor}
 \usepackage{caption}
 \usepackage{float}
@@ -25,6 +23,8 @@
 \usepackage{latexsym}
 \DeclareRobustCommand{\VAN}[3]{#2}
 \usepackage{amssymb}
+\usepackage[toc, page]{appendix}
+\usepackage{verbatim}
 
 \renewcommand{\labelenumii}{\theenumii}
 \renewcommand{\theenumii}{\theenumi.\arabic{enumii}.}
@@ -39,21 +39,21 @@
 \graphicspath{{figures/}}
 
 \usepackage{listings}
-\usepackage{generators/listings-golang} 	
+\usepackage{generators/listings-golang}
 \lstset{
     frame=single,
     basicstyle=\linespread{0.8}\footnotesize\ttfamily,
     keywordstyle=\color{red},
     numbers=left,
     numbersep=5pt,
-    showstringspaces=false, 
+    showstringspaces=false,
     stringstyle=\color{blue},
     commentstyle=\color{gray},
     breakatwhitespace=true,
     breaklines=true,
     postbreak=\mbox{\textcolor{violet}{$\hookrightarrow$}\space},
     tabsize=4,
-    language=Golang
+    %language=Golang
 }
 
 \newlength\glsdescwidth
@@ -80,5 +80,5 @@
   \pltopsep=\medskipamount
   \plitemsep=1pt
   \plparsep=1pt
-  
+
 \usepackage[acronym,nonumberlist,toc,nogroupskip]{glossaries}

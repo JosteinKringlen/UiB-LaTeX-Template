@@ -18,3 +18,4 @@
 *.glg
 *.gls
 *.glsdefs
+.texpadtmp/
