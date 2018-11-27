@@ -47,6 +47,8 @@
 \renewcommand{\cleardoublepage}{}
 \renewcommand{\clearpage}{}
 \begin{appendices}
-\include{generators/appendix-a}
+
+% Use \input instead of \include to be able to ref the file
+\input{generators/appendix-a}
 \end{appendices}
 \end{document}
